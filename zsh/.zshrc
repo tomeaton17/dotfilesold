@@ -30,14 +30,17 @@ antigen bundle <<EOBUNDLES
     # Bundles from the default repo (robbyrussell's oh-my-zsh)
     git
     ssh-agent
-    antigen bundle tonyseek/oh-my-zsh-virtualenv-prompt
 EOBUNDLES
+
+
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle tonyseek/oh-my-zsh-virtualenv-prompt
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv anaconda context dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
 # Load the theme
-antigen theme powerlevel9k/powerlevel9k
+#antigen theme powerlevel9k/powerlevel9k
 
 # Tell antigen that you're done
 antigen apply
@@ -132,3 +135,10 @@ fi
 keychain -q id_rsa
 . ~/.keychain/`uname -n`-sh
 
+# thefuck
+eval $(thefuck --alias)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# cowsay
+fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1)
