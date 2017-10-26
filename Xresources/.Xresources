@@ -19,7 +19,8 @@ rofi.location: 0
 ! ! User: tomeaton17
 ! ! Copyright: 2017 Tom Eaton
 !---------------------------------------------------------------------------------
-URxvt*background:                     #404552
+Urxvt*depth: 32
+URxvt*background:                     [100]#404552
 URxvt*foreground:                     #f3f4f5
 URxvt*cursorColor:                    #d6d6d6
 

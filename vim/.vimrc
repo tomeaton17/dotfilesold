@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'lervag/vimtex'
 Plugin 'vim-scripts/loremipsum'
+Plugin 'tpope/vim-fugitive'
 " Put new plugins before this
 call vundle#end()
 filetype plugin indent on
@@ -36,6 +37,9 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 autocmd FileType tex setlocal shiftwidth=4 tabstop=4
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType js setlocal shiftwidth=4 tabstop=4
+autocmd FileType css setlocal shiftwidth=4 tabstop=4
 autocmd FileType tex set spelllang=en_gb spell
 " clipboard
 set clipboard=unnamedplus
@@ -71,3 +75,6 @@ if !exists('g:ycm_semantic_triggers')
   let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers.tex = ['re!\\[A-Za-z]*']
+
+" Set swp files directory
+set directory=$HOME/.vim/swapfiles//

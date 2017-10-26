@@ -35,6 +35,8 @@ EOBUNDLES
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle tonyseek/oh-my-zsh-virtualenv-prompt
+antigen bundle peterhurford/git-it-on.zsh
+antigen bundle supercrabtree/k
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv anaconda context dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
