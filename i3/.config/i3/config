@@ -240,3 +240,8 @@ for_window [instance="floating_term"] floating enable
 
 # pdfc setup
 for_window [ title="^pdfpc - present" ] border none floating enable
+
+# i3 gaps
+smart_gaps on
+gaps inner 5
+gaps outer 2
